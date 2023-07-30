@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="digitalcalci.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+    
+</head>
+<body>
+    <div class="to">
+    <div class="co">
+        <input class="no" type="text" placeholder="0" id="inp">
+    </div>
+    <div class="po">
+        <div class="fst">
+            <button id="a9" class="ad">9</button>
+            <button id="a8" class="ad">8</button>
+            <button id="a7" class="ad">7</button>  
+            <button id="e" class="ad" >*</button>         
+        </div>  
+         <div class="fst">
+            <button id="a6" class="ad">6</button>
+            <button id="a5" class="ad">5</button>
+            <button id="a4" class="ad">4</button>  
+            <button id="c" class="ad" >-</button>         
+        </div>
+       <div class="fst">
+            <button id="a3" class="ad">3</button>
+            <button id="a2" class="ad">2</button>
+            <button id="a1" class="ad">1</button>
+            <button id="b" class="ad" >+</button>           
+        </div>
+        <div class="fst">
+            <button id="d" class="ad" >/</button>
+            <button id="a0" class="ad">0</button>
+            <button id="a91" class="ad">.</button>
+            <button id="f" class="ad" >=</button>
+        </div>
+        <div class="fst">
+        <button class="ad">
+            <span class="material-icons">backspace</span>
+        </button>
+        <button class="ad">clear</button>
+    </div>
+</div>
+</div>
+
+
+<script>
+    let string = "";
+    let buttons = document.querySelectorAll(".ad");
+    
+    Array.from(buttons).forEach((item)=>{
+        item.addEventListener('click',(e)=>{
+           if(e.target.innerHTML=="=")
+           {
+             string=eval(string); // to evaluate the values entered in the string
+             document.getElementById("inp").value=string;
+           }
+           else if(e.target.innerHTML=="clear"){
+             string = string.substring(0,string.length-1); // to remove an element from the last
+             document.getElementById("inp").value=string;
+           }
+           else if(e.target.innerHTML=="backspace")
+           { 
+            string = "";
+            document.getElementById("inp").value=string;
+           }
+           else{
+             string = string+e.target.innerHTML; //to add element one to another
+             document.getElementById("inp").value=string;
+           }
+        })
+    });
+
+
+   
+ </script>
+</body>
+</html>

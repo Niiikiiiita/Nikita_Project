@@ -1,0 +1,78 @@
+*
+{
+    margin: 0;padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: #000;
+}
+.to
+{   
+    margin: auto;
+    margin-top: 140px;
+    height: 500px;
+    width: 350px;
+    background: #000;
+}
+.co
+{ float: left;
+    height: 100px;
+    width: 100%;
+    background: wheat;
+}
+.no
+{
+   width: 100%;
+   border: none;
+   background: white;
+   height: 100px;
+   font-size: 35px;
+}
+.po
+{ float: left;
+    height: 350px;
+    width: 100%;
+}
+.ad
+{ width: 100%;
+    color: white;
+    font-size: 25px;
+    border: none;
+    background:dimgray;
+}
+.ad:hover
+{
+    background: rgb(87, 86, 86);
+}
+.fst
+{ float: left;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+.gt
+{
+    float: left;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background:dimgray;
+    border: none;
+}
+.material-icons
+{
+    background:dimgray;
+    display: block;
+}
+.material-icons:hover{
+    background: rgb(87, 86, 86);
+}
+
+.add
+{ width: 100%;
+    color: white;
+    font-size: 25px;
+    border: none;
+    background:dimgray;
+}
